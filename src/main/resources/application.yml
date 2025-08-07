@@ -5,17 +5,8 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
-      group-id: kafka-to-solace
-      key-deserializer: org.apache.kafka.common.serialization.StringDeSerializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeSerializer  
+      group-id: kafka-to-solace        
       auto-offset-reset: earliest
 kafka:
   topic:
     employee-events: employee-topic
-
-solace:
-  java:
-    host: tcp://localhost:55555
-    msgVpn: employee
-    client-username: employee
-    client-password: employee$!
